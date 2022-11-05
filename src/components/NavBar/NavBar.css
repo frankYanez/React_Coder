@@ -1,3 +1,4 @@
-img{
-    width: 20px;
-};
+.image-cart{
+    max-width: 40px;
+    color: white;
+}

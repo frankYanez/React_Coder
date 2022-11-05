@@ -1,34 +1,38 @@
-import React from 'react';
-import "./NavBar.css";
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import { Link } from 'react-router-dom';
-import CartWidget from '../CartWidget/CartWidget';
+import React from "react";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/navbar";
+import { Link } from "react-router-dom";
+import CartWidget from "../CartWidget";
+import "../NavBar/NavBar.css";
 
-
-const Navbar = () => {
-    
-
-
+const NavBar = () => {
   return (
     <div>
-     <navbar bg="dark" variant="dark">
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
-          <Link to='/'>Arcolo</Link>
-          <Nav className="me-auto">
-            <Link to='/categoria/remeras'>Remeras</Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-          </Nav>
-          <Link><CartWidget/> </Link>
+          <Link to="/">
+            <Navbar.Brand href="#home">Arcolo</Navbar.Brand>
+          </Link>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="me-auto">
+              <Link to="/categoria/remeras">Remeras</Link>
+              <Link to="/categoria/camisas">Camisas</Link>
+              <Link to="/categoria/jeans">Jeans</Link>
+              <Link to="/categoria/zapatillas">Zapatillas</Link>
+              <Link to="/categoria/accesorios">Accesorios</Link>
+            </Nav>
+            <Nav>
+              <Link to="/cart">
+                <CartWidget />
+              </Link>
+            </Nav>
+          </Navbar.Collapse>
         </Container>
-      </navbar>
-      
+      </Navbar>
     </div>
-    
-   
   );
 };
 
-export default Navbar;
+export default NavBar;
