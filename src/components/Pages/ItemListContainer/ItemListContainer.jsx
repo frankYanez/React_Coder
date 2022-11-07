@@ -6,6 +6,7 @@ import "./Item.css";
 import ItemDetail from "../../ItemDetail/ItemDetail";
 import { Link } from "react-router-dom";
 import ItemList from "../../ItemList/ItemList";
+import Item from "../../Item/Item";
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
@@ -26,24 +27,33 @@ const ItemListContainer = () => {
   //   getDocs(queryCollection)
   //   .then(data => setProducts(data.docs.map( prod => ({id:prod.id}))))
   // },[])
+  
 
-  console.log(products.id);
+  
+  ;
+
   return (
     <div className="container-cards">
-      {loading ? (
+      {loading ? 
         <h3>Cargando</h3>
-      ):
-      <Link to={`/detalle/${products.id}`}>
-        c
+      : <div>
+        <ItemList products={products}/>
+        
+      </div>
 
-        <ItemList products={ products }/>
-      </Link>
-      
+        // <Link to={`detalle/${produ.id}`}>
+        // { products.map(produ => 
+        // <Item key={produ.id} produ={produ}>{produ.nombre}</Item>
+       
+        // )}
+        // </Link>
+        
       }</div>
-  );
-};
+      
+      
+    )}
+    export default ItemListContainer;
 
-export default ItemListContainer;
       //   products.map((product, id) => (
       //     
       //       

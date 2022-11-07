@@ -18,8 +18,7 @@ const ItemDetail = ({ producto = {
   return (
 
     <div>
-        <h2>{producto.name}</h2>
-        <img src={producto.photo} alt="" />
+        <h3>Item Detail</h3>
     </div>
   )
 }
