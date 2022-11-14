@@ -33,7 +33,7 @@ const ItemListContainer = () => {
   ;
 
   return (
-    <div className="container-cards">
+    <div className="container-cards d-flex">
       {loading ? 
         <h3>Cargando</h3>
       : <div>

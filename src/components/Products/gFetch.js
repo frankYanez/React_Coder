@@ -15,10 +15,10 @@ export const products = [
     {id: '11', name: 'Gorra' , price: 200, stock: 10, category: 'zapatillas', photo:'/images/hat.jpg'}
 ]
 
-export const gfetch = () => {
+export const gfetch = (id) => {
     return  new Promise((res,rej) =>{
     setTimeout(()=>{
-        res(products)
+        res(id ? products.find(prod => prod.id === id ) : products)
         
         },3000)
     })

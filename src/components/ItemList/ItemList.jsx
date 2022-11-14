@@ -7,10 +7,10 @@ import { products } from '../Products/gFetch'
 const ItemList = ({ products }) => {
 
   return (
-    <div>
+    <div >
       {products.map( produ => <div key={produ.id}>
         <Link to={`/detalle/${produ.id}`}>
-        <Item produ={produ} />
+        <Item produ={produ}   />
         
         </Link>
         
