@@ -3,28 +3,30 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/navbar";
 import { Link } from "react-router-dom";
+import { useCartContext } from "../../Context/CartContext";
 import CartWidget from "../CartWidget";
-import "../NavBar/NavBar.css";
+import "./NavBar.css";
 
-const NavBar = () => {
+const NavBar = (props) => {
+  const {cantidadTotal} = useCartContext()
   return (
     <div>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
-          <Link to="/">
-            <Navbar.Brand href="#home">Arcolo</Navbar.Brand>
-          </Link>
+          <Link className="text-decoration-none" to="/">Arcolo</Link>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
-              <Link to="/categoria/remeras">Remeras</Link>
-              <Link to="/categoria/camisas">Camisas</Link>
-              <Link to="/categoria/jeans">Jeans</Link>
-              <Link to="/categoria/zapatillas">Zapatillas</Link>
-              <Link to="/categoria/accesorios">Accesorios</Link>
+            <Nav className="me-auto text-center contenedor-nav">
+              <Link className="text-decoration-none text-white mx-3" to="/categoria/remeras">Remeras</Link>
+              <Link className="text-decoration-none text-white mx-3"  to="/categoria/camisas">Camisas</Link>
+              <Link className="text-decoration-none text-white mx-3" to="/categoria/jeans">Jeans</Link>
+              <Link className="text-decoration-none text-white mx-3" to="/categoria/zapatillas">Zapatillas</Link>
+              <Link className="text-decoration-none text-white mx-3" to="/categoria/accesorios">Accesorios</Link>
             </Nav>
             <Nav>
+              { cantidadTotal()}
               <Link to="/cart">
+
                 <CartWidget />
               </Link>
             </Nav>

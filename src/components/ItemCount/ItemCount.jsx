@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const ItemCount = ({ onAdd, stock, init }) => {
+const ItemCount = ({ stock, init, onAdd}) => {
   const [count, setCount] = useState(init);
 
   const handleAdd = () => {

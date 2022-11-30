@@ -3,22 +3,22 @@ import Carousel from 'react-bootstrap/Carousel';
 
 const CarouselImages = () => {
   return (
-    <div>
-    <Carousel>
+    <div className='h-50'>
+    <Carousel >
       <Carousel.Item>
         <img
-          className="d-block w-100"
+        className="d-block w-100 h-25"
           src="/images/carousel-1.jpg"
           alt="First slide"
         />
-        <Carousel.Caption>
+        <Carousel.Caption >
           <h3>First slide label</h3>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
+          className="d-block w-100 h-25"
           src="/images/carousel-2.jpg"
           alt="Second slide"
         />
@@ -30,7 +30,7 @@ const CarouselImages = () => {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
+          className="d-block w-100 h-25"
           src="/images/carousel-3.jpg"
           alt="Third slide"
         />

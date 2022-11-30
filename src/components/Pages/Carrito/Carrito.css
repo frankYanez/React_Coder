@@ -1,0 +1,14 @@
+.form{
+    margin: 0 auto;
+    background-color: black;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+input{
+    padding: 5px;
+}
+
+.contenedor-carrito{
+    margin: 0 auto;
+}

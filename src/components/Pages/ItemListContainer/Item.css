@@ -64,7 +64,7 @@ body{
   color: #17c3b2;
 }
 
-button::before {
+/* button::before {
   content: "";
   width: 0;
   height: 300%;
@@ -84,7 +84,7 @@ button:hover::before {
 
 button:hover {
   color: #111;
-}
+} */
 
 .photo-card{
     width: 100%;
